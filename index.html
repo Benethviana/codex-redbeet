@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo de Popup</title>
+    <link rel="stylesheet" href="assets/css/popup.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>Popup interativo</h1>
+      <p>
+        Este é um exemplo simples de um popup modal criado com HTML, CSS e
+        JavaScript. Clique no botão abaixo para abrir o popup.
+      </p>
+      <button class="btn" id="open-popup">Abrir popup</button>
+    </main>
+
+    <div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-hidden="true">
+      <div class="popup__content">
+        <header class="popup__header">
+          <h2 class="popup__title" id="popup-title">Título do popup</h2>
+          <button class="popup__close" type="button" aria-label="Fechar popup" data-close>
+            &times;
+          </button>
+        </header>
+        <div class="popup__body">
+          <p>
+            Você pode colocar qualquer conteúdo aqui dentro, como textos,
+            formulários ou imagens. Este popup inclui um fundo semitransparente e
+            fecha ao clicar fora do conteúdo ou no botão de fechar.
+          </p>
+        </div>
+        <footer class="popup__footer">
+          <button class="btn btn--secondary" type="button" data-close>Cancelar</button>
+          <button class="btn" type="button">Confirmar</button>
+        </footer>
+      </div>
+    </div>
+
+    <div class="popup__backdrop" id="popup-backdrop" hidden></div>
+
+    <script src="assets/js/popup.js"></script>
+  </body>
+</html>
