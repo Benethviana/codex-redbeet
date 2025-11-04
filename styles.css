@@ -1,0 +1,370 @@
+:root {
+  --bg: #05010f;
+  --bg-alt: #0c061d;
+  --bg-card: rgba(12, 6, 29, 0.85);
+  --primary: #ff1744;
+  --primary-dark: #c4001d;
+  --accent: #ffab00;
+  --text: #f5f6ff;
+  --text-muted: rgba(245, 246, 255, 0.75);
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  --radius: 22px;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, rgba(255, 23, 68, 0.15), transparent 55%),
+    radial-gradient(circle at bottom left, rgba(255, 171, 0, 0.12), transparent 45%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+ h2,
+ h3,
+ h4 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+ul,
+ ol {
+  padding-left: 1.2rem;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.top-banner {
+  background: rgba(255, 23, 68, 0.1);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.disclaimer {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.hero {
+  padding: 6rem 0 4rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.offer {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.price {
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.value-prop {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.benefits {
+  display: grid;
+  gap: 0.6rem;
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-card h2 {
+  font-size: 1.5rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--primary), #ff416d);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.95rem 2.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 18px 30px rgba(255, 23, 68, 0.3);
+}
+
+.cta:hover,
+.cta:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 40px rgba(255, 23, 68, 0.4);
+}
+
+.cta.secondary {
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.trust {
+  color: var(--text-muted);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+
+.target,
+.capabilities,
+.social-proof,
+.comparison,
+.checkout,
+.guarantee,
+.faq,
+.final-cta {
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.grid-list {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+
+.powers-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.powers-grid article {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  height: 100%;
+}
+
+.highlight {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, rgba(255, 23, 68, 0.22), rgba(5, 1, 15, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.social-proof .quotes-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.social-proof figure {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-proof blockquote {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+}
+
+.social-proof figcaption {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.stats {
+  text-align: center;
+  margin-top: 3rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.stats .cta {
+  justify-self: center;
+}
+
+.comparison .table-wrapper {
+  margin-top: 2.5rem;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.comparison caption {
+  text-align: left;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.comparison th,
+.comparison td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: left;
+}
+
+.comparison th:first-child,
+.comparison td:first-child {
+  background: rgba(255, 255, 255, 0.02);
+  font-weight: 600;
+}
+
+.checkout-card {
+  margin-top: 2.5rem;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, rgba(5, 1, 15, 0.95), rgba(255, 23, 68, 0.15));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.checkout-card ul {
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+  padding-left: 1.2rem;
+}
+
+.checkout-card .note {
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.statement {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.faq dl {
+  margin: 0;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.faq dt {
+  font-weight: 700;
+  color: #fff;
+}
+
+.faq dd {
+  margin: 0.4rem 0 0;
+  color: var(--text-muted);
+}
+
+.final-cta {
+  text-align: center;
+  background: rgba(255, 23, 68, 0.08);
+}
+
+.footer {
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--border);
+  background: #04000a;
+  text-align: center;
+}
+
+.footer p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .cta {
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero-card,
+  .highlight,
+  .checkout-card,
+  .social-proof figure {
+    padding: 1.5rem;
+  }
+}
